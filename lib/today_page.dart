@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-//import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'novatransacao.dart';
 
 class TodayPage extends StatelessWidget {
   const TodayPage({Key? key}) : super(key: key);
@@ -19,7 +19,8 @@ class TodayPage extends StatelessWidget {
               height: 60,
               width: 200,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.blue),
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 55, 202, 247)),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -43,26 +44,37 @@ class TodayPage extends StatelessWidget {
                   ]),
             ),
             Container(
-              height: 150,
+              height: 100,
               width: 360,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), color: Colors.blue),
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 55, 202, 247)),
               child: const Text('Container 1 - Data atual + Saldo'),
             ),
             Container(
-                height: 150,
+                height: 100,
                 width: 360,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.blue),
+                    color: const Color.fromARGB(255, 55, 202, 247)),
                 child: const Text('Container 2 - Gasto Total Diário')),
             Container(
-                height: 150,
+                height: 100,
                 width: 360,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.blue),
-                child: const Text('Container 3 - Gasto Total Mensal'))
+                    color: const Color.fromARGB(255, 55, 202, 247)),
+                child: const Text('Container 3 - Gasto Total Mensal')),
+            FloatingActionButton.extended(
+              onPressed: () {
+                novatransacao(context);
+              },
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
+              icon: const Icon(Icons.add),
+              label: const Text('Nova Transação'),
+              backgroundColor: Colors.amber,
+            )
           ],
         ),
       ),
