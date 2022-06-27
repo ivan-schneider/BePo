@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:bepo/widgets/new_transaction.dart';
 import 'package:bepo/widgets/transaction_list.dart';
 import 'package:bepo/models/transaction.dart';
+import 'package:bepo/widgets/new_tx_button.dart';
 
 class UserTransactions extends StatefulWidget {
   @override
@@ -50,6 +51,7 @@ class _UserTransactionsState extends State<UserTransactions> {
       children: <Widget>[
         NewTransaction(_addNewTransaction),
         TransactionList(_userTransactions),
+        AddTransaction(_addNewTransaction),
       ],
     );
   }
