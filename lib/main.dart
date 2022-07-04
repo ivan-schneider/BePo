@@ -22,19 +22,21 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('BePo'),
       ),
-      body: Column(
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            height: 150,
-            child: const Card(
-              elevation: 5,
-              color: Colors.green,
-              child: Text('CHART'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              height: 150,
+              child: const Card(
+                elevation: 5,
+                color: Colors.green,
+                child: Text('CHART'),
+              ),
             ),
-          ),
-          UserTransactions(),
-        ],
+            UserTransactions(),
+          ],
+        ),
       ),
     );
   }

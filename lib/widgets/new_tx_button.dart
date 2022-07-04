@@ -141,6 +141,8 @@ class AddTransactionState extends State<AddTransaction> {
                     if (_formKey.currentState!.validate()) {
                       widget.newTx(titleController.text,
                           double.parse(amountController.text));
+                      titleController.clear();
+                      amountController.clear();
                       Navigator.of(context).pop();
                     }
                   },
